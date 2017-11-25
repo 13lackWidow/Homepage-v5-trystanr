@@ -52,6 +52,7 @@ var linkMenu = [
   ["Nyaa",                     "https://nyaa.si/",""],
   ["Kissanime",                "http://kissanime.ru/",""],
   ["MLP Episodes",             "https://mlp-episodes.tk/",""],
+  ["MLP Downloads",            "https://yp1.yayponies.no/videos/episodes.php",""],
   ["FimFiction",               "https://fimfiction.net/",""],
   ["Derpi",                    "https://derpibooru.org/",""],
 
@@ -73,6 +74,10 @@ var linkMenu = [
   ["/trash/ Garbage",          "https://boards.4chan.org/trash/catalog",""],
   ["/t/ Piracy",               "https://boards.4chan.org/t/catalog",""],
   ["/mlpol/ MLP + POL",        "https://mlpol.net/mlpol/catalog.html",""], 
+  ["/pch/ PonyChan",           "https://www.ponychan.net/",""],
+  ["/nft/ New Fap Chan",       "http://www.newfapchan.org/",""],
+  ["/u18/ FurChan",            "https://www.u18chan.com/",""],
+  ["All Chans",                "http://www.allchans.org/",""],
   
   [svgCode,                    "red",                                         "-HEAD-"], // Code Stuff
   ["GitHub",                   "https://github.com/",""],
