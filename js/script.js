@@ -99,6 +99,8 @@ var linkMenu = [
   ["Dropbox",                  "https://www.dropbox.com/",""],
   ["Mega",                     "https://mega.nz/",""],
   ["Mediafire",                "https://www.mediafire.com/",""], 
+  ["Binance",                  "https://www.binance.com/?ref=13776657",""],
+  ["Coinbase",                 "https://www.coinbase.com/join/5a2e0b7da89b850104bcd9d3",""],
 ];
 // DID I FORGET TO MENTION?! THE DEMO LINKS DO NOTHING!
 
