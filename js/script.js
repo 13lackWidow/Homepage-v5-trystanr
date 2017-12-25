@@ -46,7 +46,7 @@ var svgTrash   = "<svg style=\"width:24px;height:24px\" xmlns=\"http://www.w3.or
 // Also yes I could totally use a json object to represent the menus, but I didn't feel like reprogramming the whole script. Probably doing that next site, though.
 var linkMenu = [
   [svgTrash,                   "blue",                                        "-HEAD-"], // Anime
-  ["Shadbase",                 "http://www.shadbase.com/",""],
+  // ["Shadbase",                 "http://www.shadbase.com/",""],
   ["AnimeNewsNetwork",         "https://www.animenewsnetwork.com/",""],
   ["MyAnimeList",              "https://myanimelist.net/",""],
   ["Nyaa",                     "https://nyaa.si/",""],
@@ -73,6 +73,7 @@ var linkMenu = [
   ["/b/ Edgy Teens",           "https://boards.4chan.org/b/catalog",""],
   ["/trash/ Garbage",          "https://boards.4chan.org/trash/catalog",""],
   ["/t/ Piracy",               "https://boards.4chan.org/t/catalog",""],
+  ["/biz/ MAXIMUM CRYPTO",     "https://boards.4chan.org/biz/catalog",""],
   ["/mlpol/ MLP + POL",        "https://mlpol.net/mlpol/catalog.html",""], 
   ["/pch/ PonyChan",           "https://www.ponychan.net/",""],
   ["/nft/ New Fap Chan",       "http://www.newfapchan.org/",""],
