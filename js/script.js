@@ -1,7 +1,7 @@
-/*=====================================================================================================*/
-/* Giving credit where credit is due, The JS is all built off of my original mod of Twily's homepage. */
-/* If there are any similarities left, it's probably because it's based on her code.                 */
-/*==================================================================================================*/
+/*========================================================================================================*/
+/* Giving credit where credit is due, The JS is all built off of taco's original mod of Twily's homepage. */
+/* If there are any similarities left, it's probably because it's based on her code.                      */
+/*========================================================================================================*/
 
 var $ = function(id) {
   return document.getElementById(id);
@@ -13,13 +13,14 @@ var dayNames = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THRUSDAY", "FRIDAY"
 /*== Options ==*/
 /*============*/
 
-var CookiePrefix = "taco_stpg_"; //prefix for cookies.
+var CookiePrefix = "widow_stpg_"; //prefix for cookies.
 var cmdPrefix = "!"; //prefix for commands.
 var ssi = 0; //set default search provider. Use array index of the array below. (Starting with 0)
 // Format: [Keyword, Search URL (Search query replaces "{Q}"), "Input placeholder text"]
 var searchSources = [
   ["g",        "https://www.google.com/#q={Q}",                          "Google"],
   ["im",       "https://www.google.com/search?tbm=isch&q={Q}",           "Google Images"],
+  ["dd",       "https://duckduckgo.com/?q={Q}",                          "DuckDuckGo"],
   ["x",        "https://www.findx.com/search?q={Q}&type=web",            "FindX"],
   ["nya",      "https://nyaa.si/?f=0&c=0_0&q={Q}",                       "Nyaa Torrents"],
   ["tpb",      "https://thepiratebay.org/search/{Q}/0/99/0",             "Pirate Bay"],
@@ -57,7 +58,7 @@ var linkMenu = [
   ["Derpi",                    "https://derpibooru.org/",""],
 
   [svgSocial,                  "green",                                       "-HEAD-"], // Media
-  ["YouTube",                  "https://www.youtube.com/",""],
+  ["Gmail",                    "https://mail.google.com/mail/",""],
   ["Facebook",                 "https://www.facebook.com/",""],
   ["Twitter",                  "https://twitter.com/?lang=en",""],
   ["Reddit",                   "https://www.reddit.com/",""],
@@ -76,8 +77,8 @@ var linkMenu = [
   ["/biz/ MAXIMUM CRYPTO",     "https://boards.4chan.org/biz/catalog",""],
   ["/mlpol/ MLP + POL",        "https://mlpol.net/mlpol/catalog.html",""], 
   ["/pch/ PonyChan",           "https://www.ponychan.net/",""],
-  ["/nft/ New Fap Chan",       "http://www.newfapchan.org/",""],
-  ["/u18/ FurChan",            "https://www.u18chan.com/",""],
+  //["/nft/ New Fap Chan",       "http://www.newfapchan.org/",""],
+  //["/u18/ FurChan",            "https://www.u18chan.com/",""],
   ["All Chans",                "http://www.allchans.org/",""],
   
   [svgCode,                    "red",                                         "-HEAD-"], // Code Stuff
@@ -93,7 +94,7 @@ var linkMenu = [
   ["/vg/ Video Game Generals", "http://boards.4chan.org/vg/catalog",""], 
 
   [svgMore,                    "yellow",                                      "-HEAD-"], // Other
-  ["Gmail",                    "https://mail.google.com/mail/",""],
+  ["YouTube",                  "https://www.youtube.com/",""],
   ["Amazon",                   "https://www.amazon.com/",""],
   ["PayPal",                   "https://www.paypal.com/us/home",""],
   ["Dropbox",                  "https://www.dropbox.com/",""],
