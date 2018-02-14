@@ -60,6 +60,7 @@ var linkMenu = [
   [svgSocial,                  "green",                                       "-HEAD-"], // Media
   ["Gmail",                    "https://mail.google.com/mail/",""],
   ["Facebook",                 "https://www.facebook.com/",""],
+  ["FB Messenger",             "https://www.messenger.com/",""],
   ["Twitter",                  "https://twitter.com/?lang=en",""],
   ["Reddit",                   "https://www.reddit.com/",""],
   ["Twitch",                   "https://www.twitch.tv/",""],
