@@ -85,6 +85,7 @@ var linkMenu = [
   [svgCode,                    "red",                                         "-HEAD-"], // Code Stuff
   ["GitHub",                   "https://github.com/",""],
   ["Gist",                     "https://gist.github.com/",""],
+  ["GitLab",                   "https://gitlab.com/",""],
   ["Cloud Coding Env",         "https://repl.it/",""],
   ["Stack Overflow",           "https://stackoverflow.com/",""], 
 
