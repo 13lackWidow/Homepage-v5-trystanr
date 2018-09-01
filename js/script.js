@@ -88,6 +88,8 @@ var linkMenu = [
   ["GitLab",                   "https://gitlab.com/",""],
   ["Cloud Coding Env",         "https://repl.it/",""],
   ["Stack Overflow",           "https://stackoverflow.com/",""], 
+  ["Pastebin",                 "https://pastebin.com/",""],
+  ["Ghostbin",                 "https://ghostbin.com/",""],
 
   [svgGamepad,                 "magenta",                                     "-HEAD-"], // Gaming
   ["Steam",                    "http://store.steampowered.com/",""],
