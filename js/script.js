@@ -20,12 +20,16 @@ var ssi = 0; //set default search provider. Use array index of the array below. 
 var searchSources = [
   ["g",        "https://www.google.com/#q={Q}",                          "Google"],
   ["im",       "https://www.google.com/search?tbm=isch&q={Q}",           "Google Images"],
-  ["dd",       "https://duckduckgo.com/?q={Q}",                          "DuckDuckGo"],
+//  ["dd",       "https://duckduckgo.com/?q={Q}",                          "DuckDuckGo"],
   ["x",        "https://www.findx.com/search?q={Q}&type=web",            "FindX"],
-  ["nya",      "https://nyaa.si/?f=0&c=0_0&q={Q}",                       "Nyaa Torrents"],
-  ["tpb",      "https://thepiratebay.org/search/{Q}/0/99/0",             "Pirate Bay"],
+//  ["nya",      "https://nyaa.si/?f=0&c=0_0&q={Q}",                       "Nyaa Torrents"],
+//  ["tpb",      "https://thepiratebay.org/search/{Q}/0/99/0",             "Pirate Bay"],
   ["ud",       "http://www.urbandictionary.com/define.php?term={Q}",     "Urban Dictionary"],
-  ["yt",       "https://www.youtube.com/results?search_query={Q}",       "YouTube"]
+  ["yt",       "https://www.youtube.com/results?search_query={Q}",       "YouTube"],
+  ["db",       "https://www.exploit-db.com/search/?action=search&q={Q}", "Exploit DB"],
+  ["cve",      "https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword={Q}",   "Common Vulns & Exposures"],
+  ["s",        "https://www.shodan.io/search?query={Q}",                 "Shodan"],
+  ["vh",       "https://www.vulnhub.com/?q={Q}&sort=date-des&type=vm",   "VulnHub"]
 ];
 
 // Because I care about readability in my JS. kthx.
