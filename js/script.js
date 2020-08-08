@@ -20,11 +20,13 @@ var ssi = 0; //set default search provider. Use array index of the array below. 
 var searchSources = [
   ["g",        "https://www.google.com/#q={Q}",                          "Google"],
   ["im",       "https://www.google.com/search?tbm=isch&q={Q}",           "Google Images"],
-//  ["dd",       "https://duckduckgo.com/?q={Q}",                          "DuckDuckGo"],
+  //  ["dd",       "https://duckduckgo.com/?q={Q}",                          "DuckDuckGo"],
   ["x",        "https://www.findx.com/search?q={Q}&type=web",            "FindX"],
-//  ["nya",      "https://nyaa.si/?f=0&c=0_0&q={Q}",                       "Nyaa Torrents"],
-//  ["tpb",      "https://thepiratebay.org/search/{Q}/0/99/0",             "Pirate Bay"],
-  ["ud",       "http://www.urbandictionary.com/define.php?term={Q}",     "Urban Dictionary"],
+  //  ["nya",      "https://nyaa.si/?f=0&c=0_0&q={Q}",                       "Nyaa Torrents"],
+  //  ["tpb",      "https://thepiratebay.org/search/{Q}/0/99/0",             "Pirate Bay"],
+  //["ud",       "http://www.urbandictionary.com/define.php?term={Q}",     "Urban Dictionary"],
+  ["t",       "https://www.tsumino.com/#~(Text~'{Q})#",                      "Tsumino Search"],
+  ["nh",       "https://nhentai.net/g/{Q}/",                             "NHentai Number"],
   ["yt",       "https://www.youtube.com/results?search_query={Q}",       "YouTube"],
   ["db",       "https://www.exploit-db.com/search/?action=search&q={Q}", "Exploit DB"],
   ["cve",      "https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword={Q}",   "Common Vulns & Exposures"],
@@ -50,16 +52,19 @@ var svgTrash   = "<svg style=\"width:24px;height:24px\" xmlns=\"http://www.w3.or
 */
 // Also yes I could totally use a json object to represent the menus, but I didn't feel like reprogramming the whole script. Probably doing that next site, though.
 var linkMenu = [
-  [svgTrash,                   "blue",                                        "-HEAD-"], // Anime
-  // ["Shadbase",                 "http://www.shadbase.com/",""],
+  [svgTrash,                   "blue",                                        "-HEAD-"], // Anime & Porn
   ["AnimeNewsNetwork",         "https://www.animenewsnetwork.com/",""],
   ["MyAnimeList",              "https://myanimelist.net/",""],
   ["Nyaa",                     "https://nyaa.si/",""],
-  ["Kissanime",                "http://kissanime.ru/",""],
-  ["MLP Episodes",             "https://mlp-episodes.tk/",""],
-  ["MLP Downloads",            "https://yp1.yayponies.no/videos/episodes.php",""],
-  ["FimFiction",               "https://fimfiction.net/",""],
-  ["Derpi",                    "https://derpibooru.org/",""],
+  ["9anime",                   "https://9anime.to/",""],
+  ["Nhentai",                  "https://nhentai.net/",""],
+  ["Tsumino",                  "https://www.tsumino.com/",""],
+  //["MLP Episodes",             "https://mlp-episodes.tk/",""],  (Defunct) 
+  //["MLP Downloads",            "https://yp1.yayponies.no/videos/episodes.php",""], (I don't watch MLP anymore)
+  //["FimFiction",               "https://fimfiction.net/",""],
+  //["Derpi",                    "https://derpibooru.org/",""],
+  //["Kissanime",                "http://kissanime.ru/",""],  (9anime is better)
+  //["Shadbase",                 "http://www.shadbase.com/",""],  (Not interested)
 
   [svgSocial,                  "green",                                       "-HEAD-"], // Media
   ["Gmail",                    "https://mail.google.com/mail/",""],
@@ -73,18 +78,20 @@ var linkMenu = [
   ["0x00sec",                  "https://0x00sec.org/",""], 
 
   [svgClover,                  "cyan",                                        "-HEAD-"], // 4chan
-  ["/mlp/ My Little Pony",     "https://boards.4chan.org/mlp/catalog",""],
+  ["/gif/ Adult Gif",          "https://boards.4chan.org/gif/catalog",""],
   ["/g/ Gentoo Warriors",      "https://boards.4chan.org/g/catalog",""],
   ["/pol/ Daddy Donald",       "https://boards.4chan.org/pol/catalog",""],
   ["/b/ Edgy Teens",           "https://boards.4chan.org/b/catalog",""],
   ["/trash/ Garbage",          "https://boards.4chan.org/trash/catalog",""],
   ["/t/ Piracy",               "https://boards.4chan.org/t/catalog",""],
   ["/biz/ MAXIMUM CRYPTO",     "https://boards.4chan.org/biz/catalog",""],
-  ["/mlpol/ MLP + POL",        "https://mlpol.net/mlpol/catalog.html",""], 
-  ["/pch/ PonyChan",           "https://www.ponychan.net/",""],
+  ["8Kun",                     "https://8kun.top/index.html",""],
+  ["All Chans",                "http://www.allchans.org/",""],
+  //["/mlpol/ MLP + POL",        "https://mlpol.net/mlpol/catalog.html",""], 
+  //["/pch/ PonyChan",           "https://www.ponychan.net/",""],
   //["/nft/ New Fap Chan",       "http://www.newfapchan.org/",""],
   //["/u18/ FurChan",            "https://www.u18chan.com/",""],
-  ["All Chans",                "http://www.allchans.org/",""],
+  //["/mlp/ My Little Pony",     "https://boards.4chan.org/mlp/catalog",""],
   
   [svgCode,                    "red",                                         "-HEAD-"], // Code Stuff
   ["GitHub",                   "https://github.com/",""],
@@ -93,13 +100,14 @@ var linkMenu = [
   ["Cloud Coding Env",         "https://repl.it/",""],
   ["Stack Overflow",           "https://stackoverflow.com/",""], 
   ["Pastebin",                 "https://pastebin.com/",""],
-  ["Ghostbin",                 "https://ghostbin.com/",""],
+  //["Ghostbin",                 "https://ghostbin.com/",""], (Defunct)
 
   [svgGamepad,                 "magenta",                                     "-HEAD-"], // Gaming
   ["Steam",                    "http://store.steampowered.com/",""],
   ["Origin",                   "https://www.origin.com",""],
   ["Humble Bundle",            "https://www.humblebundle.com/",""],
-  ["/vg/ Video Game Generals", "http://boards.4chan.org/vg/catalog",""], 
+  ["G2A",                      "https://www.g2a.com/en-us/",""],
+  ["/vg/ Video Game Generals", "http://boards.4chan.org/vg/catalog",""],
 
   [svgMore,                    "yellow",                                      "-HEAD-"], // Other
   ["YouTube",                  "https://www.youtube.com/",""],
@@ -108,8 +116,8 @@ var linkMenu = [
   ["Dropbox",                  "https://www.dropbox.com/",""],
   ["Mega",                     "https://mega.nz/",""],
   ["Mediafire",                "https://www.mediafire.com/",""], 
-  ["Binance",                  "https://www.binance.com/?ref=13776657",""],
-  ["Coinbase",                 "https://www.coinbase.com/join/5a2e0b7da89b850104bcd9d3",""],
+  ["Binance",                  "https://www.binance.com/",""],
+  ["Coinbase",                 "https://www.coinbase.com/",""],
 ];
 // DID I FORGET TO MENTION?! THE DEMO LINKS DO NOTHING!
 
