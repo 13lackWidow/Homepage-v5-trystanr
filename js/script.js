@@ -18,7 +18,7 @@ var cmdPrefix = "!"; //prefix for commands.
 var ssi = 0; //set default search provider. Use array index of the array below. (Starting with 0)
 // Format: [Keyword, Search URL (Search query replaces "{Q}"), "Input placeholder text"]
 var searchSources = [
-  ["g",        "https://www.google.com/#q={Q}",                          "Google"],
+  ["g",        "https://www.google.com/search?q={Q}",                          "Google"],
   ["im",       "https://www.google.com/search?tbm=isch&q={Q}",           "Google Images"],
   //  ["dd",       "https://duckduckgo.com/?q={Q}",                          "DuckDuckGo"],
   ["x",        "https://www.findx.com/search?q={Q}&type=web",            "FindX"],
